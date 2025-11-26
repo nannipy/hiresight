@@ -128,7 +128,7 @@ export function ImportCandidatesDialog({ jobId, onImportComplete }: ImportCandid
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button variant="outline" className="rounded-xl gap-2">
+        <Button variant="default" className="rounded-xl gap-2 bg-white text-black border hover:bg-gray-100">
           <FolderOpen className="h-4 w-4" />
           Importa Cartella
         </Button>

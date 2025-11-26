@@ -472,14 +472,14 @@ const Candidates = () => {
           <div className="lg:col-span-4 space-y-6">
             
             {/* Job Selection List */}
-            <div className="space-y-4 ">
+            <Card className="border-none shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] rounded-[20px] bg-white top-4 p-4">
               <h3 className="text-lg font-semibold text-gray-900 ml-2">Posizioni Aperte</h3>
-              <div className="space-y-3 max-h-[400px] overflow-y-auto p-2 custom-scrollbar">
+              <div className="space-y-3 max-h-[400px] overflow-y-auto p-2 custom-scrollbar mt-3">
                 {jobPostings.map((job) => (
                   <Card 
                     key={job.id} 
                     className={`cursor-pointer transition-all duration-200 border-none shadow-sm hover:shadow-md ${
-                      selectedJobId === job.id ? "ring-2 ring-gray-900 bg-gray-900 text-white" : "bg-white hover:bg-gray-50"
+                      selectedJobId === job.id ? "ring-2 ring-gray-900 bg-gray-900 text-white" : "bg-gray-100 hover:bg-gray-50"
                     }`}
                     onClick={() => setSelectedJobId(job.id)}
                   >
@@ -495,7 +495,7 @@ const Candidates = () => {
                   </Card>
                 ))}
               </div>
-            </div>
+            </Card>
 
             {/* Selected Job Details */}
             {selectedJob && (
